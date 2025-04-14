@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anniversary</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e6f5d0; /* hijau muda */
+      color: #5a5a3c; /* warna teks olive */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      animation: fadeInBody 2s ease-in;
+    }
+
+    .container {
+      background-color: #fffadc; /* kuning muda krem */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(183, 209, 163, 0.4);
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      border: 5px solid #a8d58e;
+      animation: slideIn 1.5s ease;
+    }
+
+    h1 {
+      color: #88b04b;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    img {
+      border: 4px solid #a8d58e;
+      border-radius: 10px;
+      width: 250px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    button {
+      background-color: #a8d58e;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    button:hover {
+      background-color: #95c477;
+    }
+
+    .description {
+      background-color: #f8f4d8;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 1.1em;
+      border: 2px dashed #c7df94;
+      margin-top: 20px;
+      animation: fadeInText 2s ease-in 0.5s forwards;
+      opacity: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+        .container {
+        padding: 15px; }
+
+        img {
+        width: 200px;}
+        .description {
+        font-size: 1em;}
+        button { 
+        font-size: 0.95em;
+        padding: 8px 12px;}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Anniversary My Love</h1>
+    <img src="love.jpg" alt="Love" />
+    
+    <!-- Tombol di bawah gambar -->
+    <button onclick="document.getElementById('bg-music').play()">Putar Musik 🎵</button>
+
+    <p class="description">
+      Hi sayang, <br><br> Happy 1st anniversary! 🎉 Nggak kerasa ya, udah satu tahun aja kita bareng. It feels like just yesterday we started this crazy, sweet, and sometimes silly journey together.
+      <br><br>
+      Selama setahun ini, banyak banget hal yang kita lewatin bareng — dari yang lucu, nyebelin, sampai yang bikin kita makin ngerti satu sama lain. Thank you for always being there, for your hugs, your jokes, and even your random mood swings 😝 (yang somehow, tetap aku kangenin).
+      <br><br>
+      We’ve had our ups and downs, and yes — we've argued, misunderstood each other, and had to say sorry more than once. Tapi kita juga selalu saling memaafkan, belajar dari kesalahan, dan nggak pernah nyerah buat terus jalan bareng. That’s what makes us strong. We're not perfect, but we keep trying, together.<br><br>
+      Honestly, I feel so lucky to have you in my life. Kamu tuh bukan cuma pacar, tapi juga best friend, tempat curhat, partner in crime, dan kadang-kadang... tukang ngemil aku juga 🤣<br><br>
+      Semoga kita terus tumbuh bareng ya. I know we're not perfect, but I believe we’re perfect for each other. Let’s keep making memories, laughing over dumb stuff, and loving each other more and more each day.
+      <br><br>
+      I love really you so much💌 <br>
+      Love, <br>
+      [dara]
+    </p>
+  </div>
+
+  <!-- Musik Otomatis + Loop -->
+  <audio id="bg-music" autoplay loop>
+    <source src="love.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
